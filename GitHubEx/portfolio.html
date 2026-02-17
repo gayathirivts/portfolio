@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prakash | Portfolio</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Inter", sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f8fafc;
+  color:#111827;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  position:fixed;
+  width:100%;
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  z-index:1000;
+}
+
+nav h2{
+  color:#2563EB;
+}
+
+nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#111827;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#EC4899;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:140px 80px 100px;
+}
+
+.hero-text{
+  max-width:50%;
+}
+
+.hero-text h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero-text span{
+  color:#2563EB;
+}
+
+.hero-text p{
+  margin-bottom:30px;
+  font-size:18px;
+  color:#555;
+}
+
+.hero-btn{
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  background:#EC4899;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 20px rgba(236,72,153,0.4);
+}
+
+/* PROFILE IMAGE */
+
+.hero img{
+  width:320px;
+  height:420px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+  transition:0.4s;
+}
+
+.hero img:hover{
+  transform:scale(1.05);
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title{
+  text-align:center;
+  margin:100px 0 60px;
+  font-size:34px;
+  color:#2563EB;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  padding:0 80px;
+}
+
+.project-card{
+  background:white;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  transition:0.4s;
+  cursor:pointer;
+}
+
+.project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+.project-card h3{
+  margin-bottom:10px;
+  color:#111827;
+}
+
+.project-card p{
+  font-size:14px;
+  color:#555;
+  margin-bottom:15px;
+}
+
+.project-card button{
+  padding:8px 18px;
+  border-radius:20px;
+  border:none;
+  background:#2563EB;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.project-card button:hover{
+  background:#EC4899;
+}
+
+/* ================= CASE STUDY ================= */
+
+.case-study{
+  margin:120px 80px;
+  padding:60px;
+  border-radius:25px;
+  background:linear-gradient(135deg,#2563EB,#EC4899);
+  color:white;
+  text-align:center;
+  box-shadow:0 30px 70px rgba(0,0,0,0.2);
+  transition:0.4s;
+}
+
+.case-study:hover{
+  transform:scale(1.02);
+}
+
+.case-study h2{
+  margin-bottom:20px;
+}
+
+.case-study p{
+  max-width:600px;
+  margin:auto;
+  margin-bottom:30px;
+  line-height:1.6;
+}
+
+.case-study button{
+  padding:12px 30px;
+  border-radius:30px;
+  border:none;
+  background:white;
+  color:#2563EB;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.case-study button:hover{
+  background:#111827;
+  color:white;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  text-align:center;
+  padding:40px;
+  margin-top:80px;
+  background:#111827;
+  color:white;
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <h2>Prakash</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#case">Case Study</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hello, I'm <span>Prakash Kumar</span></h1>
+    <p>AI & Full Stack Engineer building intelligent systems and scalable web platforms.</p>
+    <button class="hero-btn">View Projects</button>
+  </div>
+
+  <img src="https://picsum.photos/400/600">
+</section>
+
+<h2 class="section-title" id="projects">My Projects</h2>
+
+<section class="projects">
+
+  <div class="project-card">
+    <h3>Photography Portfolio</h3>
+    <p>Creative photography website with gallery and booking.</p>
+    <button>View</button>
+  </div>
+
+  <div class="project-card">
+    <h3>Government E-Portal</h3>
+    <p>Citizen service platform with scheme management.</p>
+    <button>View</button>
+  </div>
+
+  <div class="project-card">
+    <h3>Charity Website</h3>
+    <p>Donation and campaign management platform.</p>
+    <button>View</button>
+  </div>
+
+  <div class="project-card">
+    <h3>Payslip Generator</h3>
+    <p>Automated salary slip generator with admin control.</p>
+    <button>View</button>
+  </div>
+
+  <div class="project-card">
+    <h3>Fitness Website</h3>
+    <p>Gym and trainer booking web application.</p>
+    <button>View</button>
+  </div>
+
+  <div class="project-card">
+    <h3>Parlour Booking</h3>
+    <p>Online appointment scheduling platform.</p>
+    <button>View</button>
+  </div>
+
+</section>
+
+<section class="case-study" id="case">
+  <h2>Featured Case Study</h2>
+  <p>
+    A complete AI-powered web solution designed to automate real-world business processes, improve performance and optimize workflow using Python, APIs and scalable architecture.
+  </p>
+  <button>Read Full Case Study</button>
+</section>
+
+<footer>
+  © 2026 Prakash Kumar | AI & Full Stack Engineer
+</footer>
+
+</body>
+</html>
