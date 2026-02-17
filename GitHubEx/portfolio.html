@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Prakash | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prakash | AI & Full Stack Engineer</title>
 
 <style>
 
@@ -10,13 +11,13 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   scroll-behavior:smooth;
 }
 
 body{
-  background:#f8fafc;
-  color:#111827;
+  background:#0d1117;
+  color:#e6edf3;
 }
 
 /* ================= NAVBAR ================= */
@@ -25,100 +26,128 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 60px;
-  position:fixed;
-  width:100%;
-  background:white;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
-  z-index:1000;
+  padding:20px 80px;
+  background:#0d1117;
+  border-bottom:1px solid #1f2937;
 }
 
 nav h2{
-  color:#2563EB;
+  color:#58a6ff;
 }
 
 nav ul{
   display:flex;
-  gap:30px;
   list-style:none;
+  gap:30px;
 }
 
 nav ul li a{
   text-decoration:none;
-  color:#111827;
-  font-weight:500;
+  color:#c9d1d9;
   transition:0.3s;
 }
 
 nav ul li a:hover{
-  color:#EC4899;
+  color:#58a6ff;
 }
 
 /* ================= HERO ================= */
 
 .hero{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  padding:140px 80px 100px;
+  justify-content:space-between;
+  padding:100px 80px;
+  gap:60px;
 }
 
-.hero-text{
-  max-width:50%;
+.hero-left{
+  flex:1;
 }
 
-.hero-text h1{
-  font-size:48px;
+.hero-left h1{
+  font-size:52px;
+  line-height:1.2;
   margin-bottom:20px;
 }
 
-.hero-text span{
-  color:#2563EB;
+.hero-left h1 span{
+  color:#58a6ff;
 }
 
-.hero-text p{
-  margin-bottom:30px;
+.hero-left p{
   font-size:18px;
-  color:#555;
+  color:#8b949e;
+  margin-bottom:30px;
+  line-height:1.6;
+  max-width:600px;
 }
 
-.hero-btn{
+.hero-buttons{
+  display:flex;
+  gap:20px;
+}
+
+.btn-primary{
   padding:12px 28px;
-  border:none;
-  border-radius:30px;
-  background:#EC4899;
+  border-radius:8px;
+  background:#238636;
   color:white;
+  border:none;
   cursor:pointer;
   transition:0.3s;
 }
 
-.hero-btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 20px rgba(236,72,153,0.4);
+.btn-primary:hover{
+  background:#2ea043;
+  transform:translateY(-3px);
 }
 
-/* PROFILE IMAGE */
+.btn-outline{
+  padding:12px 28px;
+  border-radius:8px;
+  background:transparent;
+  border:1px solid #30363d;
+  color:#c9d1d9;
+  cursor:pointer;
+  transition:0.3s;
+}
 
-.hero img{
-  width:320px;
-  height:420px;
+.btn-outline:hover{
+  border-color:#58a6ff;
+  color:#58a6ff;
+}
+
+/* Profile Image */
+
+.hero-right{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.profile-circle{
+  width:360px;
+  height:360px;
+  border-radius:50%;
+  overflow:hidden;
+  border:6px solid #1f2937;
+  box-shadow:0 0 40px rgba(88,166,255,0.2);
+}
+
+.profile-circle img{
+  width:100%;
+  height:100%;
   object-fit:cover;
-  border-radius:20px;
-  box-shadow:0 25px 60px rgba(0,0,0,0.15);
-  transition:0.4s;
-}
-
-.hero img:hover{
-  transform:scale(1.05);
 }
 
 /* ================= SECTION TITLE ================= */
 
 .section-title{
   text-align:center;
+  font-size:38px;
   margin:100px 0 60px;
-  font-size:34px;
-  color:#2563EB;
+  color:#58a6ff;
 }
 
 /* ================= PROJECTS ================= */
@@ -127,100 +156,104 @@ nav ul li a:hover{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:30px;
-  padding:0 80px;
+  padding:0 80px 100px;
 }
 
 .project-card{
-  background:white;
-  border-radius:18px;
-  padding:25px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
-  transition:0.4s;
-  cursor:pointer;
+  background:#161b22;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid #30363d;
+  transition:0.3s;
 }
 
 .project-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+  transform:translateY(-8px);
+  border-color:#58a6ff;
 }
 
-.project-card h3{
+.project-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.project-content{
+  padding:20px;
+}
+
+.project-content h3{
   margin-bottom:10px;
-  color:#111827;
 }
 
-.project-card p{
+.project-content p{
   font-size:14px;
-  color:#555;
+  color:#8b949e;
   margin-bottom:15px;
 }
 
-.project-card button{
+.project-btn{
+  display:inline-block;
   padding:8px 18px;
-  border-radius:20px;
-  border:none;
-  background:#2563EB;
+  border-radius:6px;
+  background:#238636;
   color:white;
-  cursor:pointer;
+  text-decoration:none;
+  font-size:14px;
   transition:0.3s;
 }
 
-.project-card button:hover{
-  background:#EC4899;
+.project-btn:hover{
+  background:#2ea043;
 }
 
-/* ================= CASE STUDY ================= */
+/* ================= CONTACT ================= */
 
-.case-study{
-  margin:120px 80px;
-  padding:60px;
-  border-radius:25px;
-  background:linear-gradient(135deg,#2563EB,#EC4899);
-  color:white;
+.contact{
+  padding:100px 80px;
   text-align:center;
-  box-shadow:0 30px 70px rgba(0,0,0,0.2);
-  transition:0.4s;
+  background:#161b22;
 }
 
-.case-study:hover{
-  transform:scale(1.02);
-}
-
-.case-study h2{
+.contact h2{
+  font-size:36px;
   margin-bottom:20px;
+  color:#58a6ff;
 }
 
-.case-study p{
-  max-width:600px;
-  margin:auto;
-  margin-bottom:30px;
-  line-height:1.6;
+.contact p{
+  color:#8b949e;
+  margin-bottom:40px;
 }
 
-.case-study button{
-  padding:12px 30px;
-  border-radius:30px;
-  border:none;
-  background:white;
-  color:#2563EB;
-  font-weight:600;
-  cursor:pointer;
+.contact-boxes{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+}
+
+.contact-item{
+  background:#0d1117;
+  padding:25px 40px;
+  border-radius:10px;
+  border:1px solid #30363d;
   transition:0.3s;
 }
 
-.case-study button:hover{
-  background:#111827;
-  color:white;
+.contact-item:hover{
+  border-color:#58a6ff;
 }
 
-/* ================= FOOTER ================= */
+/* ================= RESPONSIVE ================= */
 
-footer{
-  text-align:center;
-  padding:40px;
-  margin-top:80px;
-  background:#111827;
-  color:white;
+@media(max-width:1000px){
+  .projects{grid-template-columns:repeat(2,1fr);}
+  .hero{flex-direction:column;text-align:center;}
+}
+
+@media(max-width:650px){
+  .projects{grid-template-columns:1fr;}
+  nav{padding:20px;}
 }
 
 </style>
@@ -228,78 +261,109 @@ footer{
 <body>
 
 <nav>
-  <h2>Prakash</h2>
+  <h2>GAYATHIRI</h2>
   <ul>
     <li><a href="#">Home</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#case">Case Study</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <section class="hero">
-  <div class="hero-text">
-    <h1>Hello, I'm <span>Prakash Kumar</span></h1>
-    <p>AI & Full Stack Engineer building intelligent systems and scalable web platforms.</p>
-    <button class="hero-btn">View Projects</button>
+  <div class="hero-left">
+    <h1>AI & Full Stack Engineer<br>
+      Building <span>Scalable Intelligent Systems</span>
+    </h1>
+
+    <p>
+      I specialize in designing and developing AI-powered platforms,
+      automation tools, and full-stack web applications that solve real-world
+      business problems with performance, scalability and clean architecture.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="btn-primary">View Projects</button>
+      <button class="btn-outline">Download Resume</button>
+    </div>
   </div>
 
-  <img src="https://picsum.photos/400/600">
+  <div class="hero-right">
+    <div class="profile-circle">
+      <img src="Images/hd girl image.avif">
+    </div>
+  </div>
 </section>
 
-<h2 class="section-title" id="projects">My Projects</h2>
+<h2 class="section-title" id="projects">Featured Projects</h2>
 
 <section class="projects">
 
   <div class="project-card">
-    <h3>Photography Portfolio</h3>
-    <p>Creative photography website with gallery and booking.</p>
-    <button>View</button>
+    <img src="Images/photopholio.png">
+    <div class="project-content">
+      <h3>Photography Portfolio</h3>
+      <p>Creative showcase website with booking and gallery management.</p>
+      <a href="#" class="project-btn">View</a>
+    </div>
   </div>
 
   <div class="project-card">
-    <h3>Government E-Portal</h3>
-    <p>Citizen service platform with scheme management.</p>
-    <button>View</button>
+    <img src="Images/gportal.png">
+    <div class="project-content">
+      <h3>Government E-Portal</h3>
+      <p>Citizen service platform with scheme and grievance system.</p>
+      <a href="#" class="project-btn">View</a>
+    </div>
   </div>
 
   <div class="project-card">
-    <h3>Charity Website</h3>
-    <p>Donation and campaign management platform.</p>
-    <button>View</button>
+    <img src="Images/charity.png">
+    <div class="project-content">
+      <h3>Charity Platform</h3>
+      <p>Donation management and campaign tracking system.</p>
+      <a href="#" class="project-btn">View</a>
+    </div>
   </div>
 
   <div class="project-card">
-    <h3>Payslip Generator</h3>
-    <p>Automated salary slip generator with admin control.</p>
-    <button>View</button>
+    <img src="Images/payslip.png">
+    <div class="project-content">
+      <h3>Payslip Generator</h3>
+      <p>Automated payroll and salary slip generation system.</p>
+      <a href="#" class="project-btn">View</a>
+    </div>
   </div>
 
   <div class="project-card">
-    <h3>Fitness Website</h3>
-    <p>Gym and trainer booking web application.</p>
-    <button>View</button>
+    <img src="Images/fitness.png">
+    <div class="project-content">
+      <h3>Fitness Web App</h3>
+      <p>Gym booking and trainer management application.</p>
+      <a href="#" class="project-btn">View</a>
+    </div>
   </div>
 
   <div class="project-card">
-    <h3>Parlour Booking</h3>
-    <p>Online appointment scheduling platform.</p>
-    <button>View</button>
+    <img src="Images/parlour.png">
+    <div class="project-content">
+      <h3>Parlour Booking</h3>
+      <p>Online appointment scheduling platform.</p>
+      <a href="#" class="project-btn">View</a>
+    </div>
   </div>
 
 </section>
 
-<section class="case-study" id="case">
-  <h2>Featured Case Study</h2>
-  <p>
-    A complete AI-powered web solution designed to automate real-world business processes, improve performance and optimize workflow using Python, APIs and scalable architecture.
-  </p>
-  <button>Read Full Case Study</button>
-</section>
+<section class="contact" id="contact">
+  <h2>Let's Work Together</h2>
+  <p>Interested in collaboration or hiring me for your next project?</p>
 
-<footer>
-  © 2026 Prakash Kumar | AI & Full Stack Engineer
-</footer>
+  <div class="contact-boxes">
+    <div class="contact-item">Email: prakash@email.com</div>
+    <div class="contact-item">LinkedIn: linkedin.com/in/prakash</div>
+    <div class="contact-item">GitHub: github.com/prakash</div>
+  </div>
+</section>
 
 </body>
 </html>
